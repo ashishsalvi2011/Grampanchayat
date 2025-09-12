@@ -1,0 +1,52 @@
+<section class="section">
+  <h2>
+    {{ langService.currentLang === 'en' ? 'Our Members' : 'आमचे सदस्य' }}
+  </h2>
+
+  <p class="description">
+    {{ langService.currentLang === 'en'
+      ? 'Our dedicated team of elected representatives works tirelessly for the development of our village and the welfare of all residents.'
+      : 'आमचे निवडून आलेले प्रतिनिधी आमच्या गावाच्या विकासासाठी आणि सर्व रहिवाशांच्या कल्याणासाठी अथक परिश्रम करतात.' }}
+  </p>
+
+
+  <div class="grid">
+    <!-- Member 1 -->
+    <div class="card">
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=300&q=80" alt="Member">
+      </div>
+      <span class="role">
+        {{ langService.currentLang === 'en' ? 'Sarpanch' : 'सरपंच' }}
+      </span>
+      <h3>Mr. Rajesh Sharma</h3>
+      <p>विलासराव पाटील</p>
+    </div>
+
+    <!-- Member 2 -->
+    <div class="card">
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=300&q=80" alt="Member">
+      </div>
+      <span class="role">
+        {{ langService.currentLang === 'en' ? 'Deputy Sarpanch' : 'उपसरपंच' }}
+      </span>
+      <h3>Mrs. Sunita Desai</h3>
+      <p>सुनीता देशमुख</p>
+    
+    </div>
+
+    <!-- Member 3 -->
+    <div class="card">
+      <div class="image-container">
+        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?auto=format&fit=crop&w=300&q=80" alt="Member">
+      </div>
+      <span class="role">
+        {{ langService.currentLang === 'en' ? 'Gram Sevak' : 'ग्रामसेवक' }}
+      </span>
+      <h3>Mr. Vijay Kumar</h3>
+      <p>विजय जाधव</p>
+     
+    </div>
+  </div>
+</section>

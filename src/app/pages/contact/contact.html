@@ -1,0 +1,92 @@
+<section class="section contact">
+
+
+
+  <h2>{{ langService.currentLang === 'en' ? 'Contact Us' : 'संपर्क साधा' }}</h2>
+  <p>{{ langService.currentLang === 'en' ? 'You can reach us at:' : 'आपण आम्हाला येथे संपर्क करू शकता:' }}</p>
+
+  <div class="contact-container">
+    <!-- Contact Info -->
+    <div class="contact-info">
+      <div class="contact-detail">
+        <div class="contact-icon"><mat-icon>location_on</mat-icon></div>
+        <div class="contact-text">
+          <h3>{{ langService.currentLang === 'en' ? 'Address' : 'पत्ता' }}</h3>
+          <p>Gram Panchayat Office, Village XYZ, District ABC, State - 123456</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon"><mat-icon>phone</mat-icon></div>
+        <div class="contact-text">
+          <h3>{{ langService.currentLang === 'en' ? 'Phone' : 'फोन' }}</h3>
+          <p>+91 9876543210</p>
+          <p>+91 9123456789</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon"><mat-icon>email</mat-icon></div>
+        <div class="contact-text">
+          <h3>{{ langService.currentLang === 'en' ? 'Email' : 'ईमेल' }}</h3>
+          <p>info@grampanchayat.com</p>
+          <p>support@grampanchayat.com</p>
+        </div>
+      </div>
+
+      <div class="contact-detail">
+        <div class="contact-icon"><mat-icon>schedule</mat-icon></div>
+        <div class="contact-text">
+          <h3>{{ langService.currentLang === 'en' ? 'Working Hours' : 'कार्याचे तास' }}</h3>
+          <p>{{ langService.currentLang === 'en' ? 'Monday to Saturday: 9:00 AM - 5:00 PM' : 'सोमवार ते शनिवार: 9:00 AM - 5:00 PM' }}</p>
+          <p>{{ langService.currentLang === 'en' ? 'Sunday: Closed' : 'रविवार: बंद' }}</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="contact-form">
+      <h3 class="form-title">{{ langService.currentLang === 'en' ? 'Send us a Message' : 'आम्हाला संदेश पाठवा' }}</h3>
+      <form [formGroup]="contactForm" (ngSubmit)="submitForm()">
+        <div class="form-group">
+          <label>{{ langService.currentLang === 'en' ? 'Your Name' : 'तुमचे नाव' }}</label>
+          <input formControlName="name" type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>{{ langService.currentLang === 'en' ? 'Email Address' : 'ईमेल पत्ता' }}</label>
+          <input formControlName="email" type="email" required>
+        </div>
+
+        <div class="form-group">
+          <label>{{ langService.currentLang === 'en' ? 'Subject' : 'विषय' }}</label>
+          <input formControlName="subject" type="text" required>
+        </div>
+
+        <div class="form-group">
+          <label>{{ langService.currentLang === 'en' ? 'Your Message' : 'तुमचा संदेश' }}</label>
+          <textarea formControlName="message" required></textarea>
+        </div>
+
+        <button type="submit" class="submit-btn">
+          {{ langService.currentLang === 'en' ? 'Send Message' : 'संदेश पाठवा' }}
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- <div class="map-container">
+    <div class="map-placeholder">
+      <i class="fas fa-map-marked-alt" style="font-size: 2rem; margin-bottom: 10px;"></i>
+      <p>{{ langService.currentLang === 'en' ? 'Interactive map showing our location' : 'आमचे स्थान दर्शविणारा नकाशा' }}</p>
+    </div>
+  </div> -->
+
+  <!-- <div class="social-links">
+    <a href="#" class="social-icon">  <mat-icon svgIcon="facebook"></mat-icon></a>
+    <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-youtube"></i></a>
+    <a href="#" class="social-icon"><i class="fab fa-whatsapp"></i></a>
+  </div> -->
+</section>

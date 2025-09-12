@@ -1,0 +1,35 @@
+<nav class="navbar">
+  <div class="logo">
+    <i class="fas fa-tree"></i>
+    <span *ngIf="langService.currentLang === 'en'">Gram Panchayat</span>
+    <span *ngIf="langService.currentLang === 'mr'">ग्राम पंचायत</span>
+  </div>
+
+  <div class="hamburger" (click)="toggleMenu()">
+    <div [class.bar1]="menuOpen"></div>
+    <div [class.bar2]="menuOpen"></div>
+    <div [class.bar3]="menuOpen"></div>
+  </div>
+
+  <!-- Overlay must cover entire screen -->
+  <div class="overlay" *ngIf="menuOpen" (click)="closeMenu()"></div>
+
+  <ul class="nav-links" [class.active]="menuOpen">
+    <li class="mobile-lang-toggle">
+      <span [class.active]="langService.currentLang === 'en'" (click)="switchLanguage('en')">English</span> /
+      <span [class.active]="langService.currentLang === 'mr'" (click)="switchLanguage('mr')">मराठी</span>
+    </li>
+
+    <li><a href="#home" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Home' : 'मुख्यपृष्ठ' }}</a></li>
+    <li><a href="#about" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'About' : 'आमच्याविषयी' }}</a></li>
+    <li><a href="#members" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Members' : 'सदस्य' }}</a></li>
+    <li><a href="#schemes" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Schemes' : 'योजना' }}</a></li>
+    <li><a href="#contact" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Contact' : 'संपर्क' }}</a></li>
+  </ul>
+
+  <!-- Desktop Language toggle -->
+  <div class="lang-toggle desktop-only">
+    <span [class.active]="langService.currentLang === 'en'" (click)="switchLanguage('en')">English</span> /
+    <span [class.active]="langService.currentLang === 'mr'" (click)="switchLanguage('mr')">मराठी</span>
+  </div>
+</nav>

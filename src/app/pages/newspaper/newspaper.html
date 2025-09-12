@@ -1,0 +1,29 @@
+
+<section id="newspaper" class="section newspaper">
+  <h2>{{ langService.currentLang === 'en' ? 'In the News' : 'बातम्यांमध्ये' }}</h2>
+
+<div class="carousel-container">
+  <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * 25 + '%)'">
+    <div class="news-card" *ngFor="let news of newsClippings">
+      <span class="year-badge">{{ news.year }}</span>
+      <div class="img-container">
+        <img [src]="news.image" alt="newspaper clipping" />
+      </div>
+      <h3>{{ langService.currentLang === 'en' ? news.titleEn : news.titleMr }}</h3>
+      <p>{{ langService.currentLang === 'en' ? news.descriptionEn : news.descriptionMr }}</p>
+    </div>
+  </div>
+</div>
+
+  <div class="carousel-controls">
+  <button class="nav-btn prev-btn" (click)="prev()">
+    <mat-icon>chevron_left</mat-icon>
+    {{ langService.currentLang === 'en' ? 'Prev' : 'मागे' }}
+  </button>
+
+  <button class="nav-btn next-btn" (click)="next()">
+    {{ langService.currentLang === 'en' ? 'Next' : 'पुढे' }}
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
+</section>

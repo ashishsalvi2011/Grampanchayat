@@ -1,0 +1,34 @@
+<div class="container1">
+  <section class="awards">
+    <div class="awards-header">
+      <h2>{{langService.currentLang === 'en' ? 'Our Awards' : 'आमचे पुरस्कार' }}</h2>
+      
+    </div>
+
+  <div class="carousel-container">
+    <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * 25 + '%)'">
+      <div class="award-card" *ngFor="let award of awards">
+        <span class="year-badge">{{ award.year }}</span>
+        <div class="icon-container">
+          <mat-icon style="height: 35px; width: 35px;" class="gold-gradient">emoji_events</mat-icon>
+        </div>
+        <h3>{{ langService.currentLang === 'en' ? award.titleEn : award.titleMr }}</h3>
+        <p>{{ langService.currentLang === 'en' ? award.descriptionEn : award.descriptionMr }}</p>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="carousel-controls">
+  <button class="nav-btn prev-btn" (click)="prev()">
+    <mat-icon>chevron_left</mat-icon>
+    {{ langService.currentLang === 'en' ? 'Prev' : 'मागे' }}
+  </button>
+
+  <button class="nav-btn next-btn" (click)="next()">
+    {{ langService.currentLang === 'en' ? 'Next' : 'पुढे' }}
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+</div>
+  </section>
+</div>

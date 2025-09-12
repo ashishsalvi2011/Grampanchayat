@@ -1,0 +1,32 @@
+<section id="village-achievements" class="section achievements">
+  <h2>
+    {{ langService.currentLang === 'en' 
+       ? 'Village Achievements 🏵️ Gram Panchayat Vashihaveli 🏵️' 
+       : 'ग्रामपंचायत वाशीहवेली 🏵️ ग्राम उपलब्धी 🏵️' }}
+  </h2>
+
+  <div class="carousel-container">
+    <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * 25 + '%)'">
+      <div class="achievement-card" *ngFor="let ach of achievements; let i = index">
+        <span class="year-badge">{{ i + 1 }}</span>
+        <div class="img-container">
+          <img [src]="ach.image" [alt]="'Achievement ' + (i + 1)" />
+        </div>
+        <h3>{{ langService.currentLang === 'en' ? ach.titleEn : ach.titleMr }}</h3>
+        <p>{{ langService.currentLang === 'en' ? ach.descriptionEn : ach.descriptionMr }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="carousel-controls">
+    <button class="nav-btn prev-btn" (click)="prev()">
+      <mat-icon>chevron_left</mat-icon>
+      {{ langService.currentLang === 'en' ? 'Prev' : 'मागे' }}
+    </button>
+
+    <button class="nav-btn next-btn" (click)="next()">
+      {{ langService.currentLang === 'en' ? 'Next' : 'पुढे' }}
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
+</section>

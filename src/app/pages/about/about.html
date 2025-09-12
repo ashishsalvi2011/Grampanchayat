@@ -1,0 +1,84 @@
+<section id="about" class="section about">
+  <div class="container">
+    <!-- Section Heading -->
+    <h2 class="about-heading">
+      {{ langService.currentLang === 'en' ? 'About Us' : 'आमच्याविषयी' }}
+    </h2>
+
+    <!-- Section Content -->
+    <p class="about-content">
+      {{ langService.currentLang === 'en' 
+        ? 'Our Gram Panchayat is dedicated to rural development, transparency, and community welfare. We strive to create sustainable solutions that empower villagers and improve quality of life through effective governance and community participation.'
+        : 'आमची ग्रामपंचायत ग्रामीण विकास, पारदर्शकता आणि समुदाय कल्याणासाठी समर्पित आहे. आम्ही शाश्वत उपाय तयार करण्याचा प्रयत्न करतो जे ग्रामीणांना सक्षम करतात आणि प्रभावी शासन आणि समुदाय सहभागाद्वारे जीवनाची गुणवत्ता सुधारतात.' }}
+    </p>
+
+    <!-- Features Grid -->
+    <div class="about-features">
+      <div class="feature">
+        <div class="feature-icon">
+          <mat-icon style="color:white; font-size:35px;">group</mat-icon>
+        </div>
+        <h3>
+          {{ langService.currentLang === 'en' ? 'Community Development' : 'समुदाय विकास' }}
+        </h3>
+        <p>
+          {{ langService.currentLang === 'en' 
+            ? 'Empowering local communities through participatory approaches and inclusive growth.'
+            : 'सहभागी दृष्टीकोण आणि समावेशक वाढीद्वारे स्थानिक समुदायांना सक्षम करणे.' }}
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+           <mat-icon style="color:white; font-size:35px;">verified_user</mat-icon>  
+        </div>
+        <h3>
+          {{ langService.currentLang === 'en' ? 'Transparency' : 'पारदर्शकता' }}
+        </h3>
+        <p>
+          {{ langService.currentLang === 'en' 
+            ? 'Ensuring open governance and accountability in all our operations and decisions.'
+            : 'आमच्या सर्व कार्यक्रमांमध्ये आणि निर्णयांमध्ये खुले शासन आणि जबाबदारी सुनिश्चित करणे.' }}
+        </p>
+      </div>
+
+      <div class="feature">
+        <div class="feature-icon">
+            <mat-icon style="color:white; font-size:35px;">favorite</mat-icon>
+        </div>
+        <h3>
+          {{ langService.currentLang === 'en' ? 'Welfare Programs' : 'कल्याण कार्यक्रम' }}
+        </h3>
+        <p>
+          {{ langService.currentLang === 'en' 
+            ? 'Implementing initiatives that address the diverse needs of our community members.'
+            : 'आमच्या समुदायातील सदस्यांच्या विविध गरजा पूर्ण करणारी उपक्रम राबविणे.' }}
+        </p>
+      </div>
+    </div>
+
+    <!-- Stats -->
+    <div class="about-stats">
+      <div class="stat">
+        <div class="stat-number">15+</div>
+        <div class="stat-label">
+          {{ langService.currentLang === 'en' ? 'Villages Served' : 'गावे सेवा पुरवली' }}
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">200+</div>
+        <div class="stat-label">
+          {{ langService.currentLang === 'en' ? 'Projects Completed' : 'प्रकल्प पूर्ण केले' }}
+        </div>
+      </div>
+
+      <div class="stat">
+        <div class="stat-number">98%</div>
+        <div class="stat-label">
+          {{ langService.currentLang === 'en' ? 'Satisfaction Rate' : 'समाधान दर' }}
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

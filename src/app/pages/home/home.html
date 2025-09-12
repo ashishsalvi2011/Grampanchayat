@@ -1,0 +1,51 @@
+<!-- <section id="home" class="hero">
+  <div class="overlay">
+    <h1>
+      {{ langService.currentLang === 'en'
+        ? 'Welcome to Our Gram Panchayat'
+        : 'आमच्या ग्रामपंचायतीत आपले स्वागत आहे' }}
+    </h1>
+    <p>
+      {{ langService.currentLang === 'en'
+        ? 'Serving the community with dedication and transparency'
+        : 'समर्पण आणि पारदर्शकतेसह समुदायाची सेवा करणे' }}
+    </p>
+    <a href="#contact" class="btn">
+      {{ langService.currentLang === 'en' ? 'Contact Us' : 'आमच्याशी संपर्क साधा' }}
+    </a>
+  </div>
+</section> -->
+
+<section id="home" class="hero">
+  <div
+    class="overlay"
+    [style.backgroundImage]="'url(' + slides[currentIndex].image + ')'"
+  >
+    <div class="text-card">
+      <h1>
+        {{ langService.currentLang === 'en'
+          ? slides[currentIndex].titleEn
+          : slides[currentIndex].titleMr }}
+      </h1>
+      <p>
+        {{ langService.currentLang === 'en'
+          ? slides[currentIndex].descEn
+          : slides[currentIndex].descMr }}
+      </p>
+      <a href="#contact" class="btn">
+        {{ langService.currentLang === 'en'
+          ? 'Contact Us'
+          : 'आमच्याशी संपर्क साधा' }}
+      </a>
+    </div>
+
+    <!-- Navigation dots -->
+    <div class="dots">
+      <span
+        *ngFor="let slide of slides; let i = index"
+        [class.active]="i === currentIndex"
+        (click)="goToSlide(i)"
+      ></span>
+    </div>
+  </div>
+</section>

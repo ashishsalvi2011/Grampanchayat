@@ -1,0 +1,60 @@
+<footer class="footer">
+  <div class="footer-container">
+    
+    <!-- About Section -->
+    <div class="footer-section footer-about">
+      <h3>{{ langService.currentLang === 'en' ? 'About Us' : 'आमच्याबद्दल' }}</h3>
+      <p>{{ langService.currentLang === 'en' 
+          ? 'Gram Panchayat XYZ is dedicated to the development and welfare of our village community.' 
+          : 'ग्रामपंचायत XYZ आमच्या गावच्या समुदायाच्या विकासासाठी आणि कल्याणासाठी समर्पित आहे.' }}
+      </p>
+      <div class="footer-social">
+        <a href="#" class="social-icon">
+          <mat-icon svgIcon="facebook"></mat-icon>
+        </a>
+        <a href="#" class="social-icon">
+          <mat-icon svgIcon="twitter"></mat-icon>
+        </a>
+        <a href="#" class="social-icon">
+          <mat-icon svgIcon="instagram"></mat-icon>
+        </a>
+        <a href="#" class="social-icon">
+          <mat-icon svgIcon="youtube"></mat-icon>
+        </a>
+      </div>
+    </div>
+
+    <!-- Quick Links -->
+    <div class="footer-section">
+      <h3>{{ langService.currentLang === 'en' ? 'Quick Links' : 'द्रुत दुवे' }}</h3>
+      <ul class="footer-links">
+        <li><a href="#"><mat-icon>chevron_right</mat-icon> {{ langService.currentLang === 'en' ? 'Home' : 'मुख्यपृष्ठ' }}</a></li>
+        <li><a href="#"><mat-icon>chevron_right</mat-icon> {{ langService.currentLang === 'en' ? 'About Us' : 'आमच्याबद्दल' }}</a></li>
+        <li><a href="#"><mat-icon>chevron_right</mat-icon> {{ langService.currentLang === 'en' ? 'Services' : 'सेवा' }}</a></li>
+        <li><a href="#"><mat-icon>chevron_right</mat-icon> {{ langService.currentLang === 'en' ? 'Contact' : 'संपर्क' }}</a></li>
+        <li><a href="#"><mat-icon>chevron_right</mat-icon> {{ langService.currentLang === 'en' ? 'FAQ' : 'सामान्य प्रश्न' }}</a></li>
+      </ul>
+    </div>
+
+    <!-- Contact Info -->
+    <div class="footer-section footer-contact">
+      <h3>{{ langService.currentLang === 'en' ? 'Contact Info' : 'संपर्क माहिती' }}</h3>
+      <p><mat-icon>location_on</mat-icon> Gram Panchayat Office, Village XYZ</p>
+      <p><mat-icon>phone</mat-icon> +91 9876543210</p>
+      <p><mat-icon>email</mat-icon> info@grampanchayat.com</p>
+      <p><mat-icon>schedule</mat-icon> {{ langService.currentLang === 'en' ? 'Mon-Sat: 9:00 AM - 5:00 PM' : 'सोमवार ते शनिवार: 9:00 AM - 5:00 PM' }}</p>
+    </div>
+  </div>
+
+  <!-- Footer Bottom -->
+  <div class="footer-bottom">
+    <p>
+      &copy; {{ currentYear }} {{ langService.currentLang === 'en' ? 'Gram Panchayat. All Rights Reserved.' : 'ग्राम पंचायत. सर्व हक्क राखीव.' }}
+    </p>
+    <div class="footer-credits">
+      <a href="#">{{ langService.currentLang === 'en' ? 'Privacy Policy' : 'गोपनीयता धोरण' }}</a>
+      <a href="#">{{ langService.currentLang === 'en' ? 'Terms of Service' : 'सेवा अटी' }}</a>
+      <a href="#">{{ langService.currentLang === 'en' ? 'Sitemap' : 'साइटमॅप' }}</a>
+    </div>
+  </div>
+</footer>
