@@ -1,29 +1,36 @@
+#schemes {
+background: linear-gradient(135deg, #e8f5e9, #c8e6c9);
+}
+
 h2 {
   font-size: 2.5rem;
   font-weight: 700;
   text-align: center;
   color: var(--text-dark);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   position: relative;
-  display: inline-block;
+  display: inline-block; /* ensures underline matches text width */
   font-family: 'Poppins', 'Segoe UI', sans-serif;
   letter-spacing: 1px;
+  padding-bottom: 10px; /* space for underline */
 }
 
-/* Gradient underline */
-h2::after {
+/* Full gradient underline */
+#schemes h2::after {
   content: '';
   position: absolute;
-  bottom: -10px;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
+  bottom: 0;
+  left: 0;
+  width: 100%;   /* full width of text */
   height: 4px;
-  background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+  background: linear-gradient(
+    90deg,
+    #c8e6c9,  /* light green */
+    #81c784,  /* medium green */
+    #388e3c   /* dark green */
+  );
   border-radius: 2px;
 }
-
-
 .section {
   padding: 80px 20px;
   text-align: center;

@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { MatIconModule } from '@angular/material/icon';
 import { Language } from '../../language';
 
@@ -82,19 +82,44 @@ newsClippings = [
 ];
 
 
-  next() {
-  if (this.currentIndex + 1 < this.newsClippings.length) {
-    this.currentIndex += 1;
-  } else {
-    this.currentIndex = 0; // loop back
+  cardsPerView = 3; // default desktop
+  cardWidth = 100 / this.cardsPerView;
+
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateCardsPerView();
   }
-}
+
+  ngOnInit() {
+    this.updateCardsPerView();
+  }
+
+  updateCardsPerView() {
+    const width = window.innerWidth;
+    if (width <= 576) {
+      this.cardsPerView = 1;
+    } else if (width <= 1024) {
+      this.cardsPerView = 2;
+    } else {
+      this.cardsPerView = 3;
+    }
+    this.cardWidth = 100 / this.cardsPerView;
+  }
+
+  next() {
+    if (this.currentIndex < this.newsClippings.length - this.cardsPerView) {
+      this.currentIndex++;
+    } else {
+      this.currentIndex = 0;
+    }
+  }
 
   prev() {
-    if (this.currentIndex - 1 >= 0) {
-      this.currentIndex -= 1;
+    if (this.currentIndex > 0) {
+      this.currentIndex--;
     } else {
-      this.currentIndex = this.newsClippings.length - 1; // loop to last
+      this.currentIndex = this.newsClippings.length - this.cardsPerView;
     }
   }
 }

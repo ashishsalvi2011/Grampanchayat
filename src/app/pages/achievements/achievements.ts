@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener, OnInit } from '@angular/core';
 import { Language } from '../../language';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
@@ -10,9 +10,12 @@ import { MatIconModule } from '@angular/material/icon';
   templateUrl: './achievements.html',
   styleUrl: './achievements.css'
 })
-export class Achievements {
+export class Achievements implements OnInit {
     currentIndex = 0;
+     cardWidth = 100; 
+     cardsPerView = 1;
  constructor(public langService: Language) {}
+
 
 achievements = [
   { 
@@ -164,11 +167,45 @@ achievements = [
   }
 ];
 
-    prev() {
-    if (this.currentIndex > 0) this.currentIndex--;
+  ngOnInit() {
+    this.updateCardsPerView();
   }
 
-  next() {
-    if (this.currentIndex < this.achievements.length - 4) this.currentIndex++;
+  @HostListener('window:resize')
+  onResize() {
+    this.updateCardsPerView();
   }
+
+updateCardsPerView() {
+  const width = window.innerWidth;
+  if (width <= 576) {
+    this.cardsPerView = 1;
+  } else if (width <= 768) {
+    this.cardsPerView = 2;
+  } else if (width <= 1200) {
+    this.cardsPerView = 3;
+  } else {
+    this.cardsPerView = 4;
+  }
+  this.cardWidth = 100 / this.cardsPerView;
+}
+
+next() {
+  const maxIndex = this.achievements.length - this.cardsPerView;
+  if (this.currentIndex >= maxIndex) {
+    this.currentIndex = 0;
+  } else {
+    this.currentIndex++;
+  }
+}
+
+prev() {
+  const maxIndex = this.achievements.length - this.cardsPerView;
+  if (this.currentIndex <= 0) {
+    this.currentIndex = maxIndex;
+  } else {
+    this.currentIndex--;
+  }
+}
+
 }

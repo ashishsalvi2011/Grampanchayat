@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Language } from '../../language';
 import { CommonModule } from '@angular/common';
 import { MatIconModule } from '@angular/material/icon';
@@ -13,7 +13,11 @@ import { MatIconModule } from '@angular/material/icon';
 export class Programs {
   constructor(public langService: Language) {}
 
-  currentIndex = 0; // for carousel scrolling
+  currentIndex = 0;
+  cardsPerView = 1;
+  cardWidth = 100;
+
+
 
   programs = [
     {
@@ -47,14 +51,8 @@ export class Programs {
       descriptionEn: 'Planting trees and promoting green initiatives in the village.',
       descriptionMr: 'गावात वृक्ष लावणे आणि पर्यावरणीय उपक्रम चालवणे.',
       image: 'https://static.pib.gov.in/WriteReadData/userfiles/image/image002WEW8.jpg'
-    },    {
-      year: '2023',
-      titleEn: 'Digital Literacy Drive',
-      titleMr: 'डिजिटल साक्षरता मोहीम',
-      descriptionEn: 'Helping villagers adopt digital tools for education and services.',
-      descriptionMr: 'शिक्षण आणि सेवांसाठी गावकऱ्यांना डिजिटल साधने शिकवणे.',
-      image: 'https://static.pib.gov.in/WriteReadData/userfiles/image/image002WEW8.jpg'
     },
+
     {
       year: '2022',
       titleEn: 'Tree Plantation Campaign',
@@ -62,18 +60,55 @@ export class Programs {
       descriptionEn: 'Planting trees and promoting green initiatives in the village.',
       descriptionMr: 'गावात वृक्ष लावणे आणि पर्यावरणीय उपक्रम चालवणे.',
       image: 'https://static.pib.gov.in/WriteReadData/userfiles/image/image002WEW8.jpg'
+    },
+        {
+      year: '2022',
+      titleEn: 'Tree Plantation Campaign',
+      titleMr: 'वृक्षारोपण मोहीम',
+      descriptionEn: 'Planting trees and promoting green initiatives in the village.',
+      descriptionMr: 'गावात वृक्ष लावणे आणि पर्यावरणीय उपक्रम चालवणे.',
+      image: 'https://static.pib.gov.in/WriteReadData/userfiles/image/image002WEW8.jpg'
     }
+
   ];
 
-  prev() {
-    if (this.currentIndex > 0) {
-      this.currentIndex--;
-    }
+  ngOnInit() {
+    this.updateCardsPerView();
   }
 
-  next() {
-    if (this.currentIndex < this.programs.length - 4) { // show 4 cards at a time
-      this.currentIndex++;
-    }
+  @HostListener('window:resize')
+  onResize() {
+    this.updateCardsPerView();
   }
+
+updateCardsPerView() {
+  const width = window.innerWidth;
+  if (width <= 576) {
+    this.cardsPerView = 1;
+  } else if (width <= 768) {
+    this.cardsPerView = 2;
+  } else if (width <= 1200) {
+    this.cardsPerView = 3;
+  } else {
+    this.cardsPerView = 4;
+  }
+  this.cardWidth = 100 / this.cardsPerView;
+}
+next() {
+  const maxIndex = this.programs.length - this.cardsPerView;
+  if (this.currentIndex < maxIndex) {
+    this.currentIndex++;
+  } else {
+    this.currentIndex = 0; // loop back
+  }
+}
+
+prev() {
+  const maxIndex = this.programs.length - this.cardsPerView;
+  if (this.currentIndex > 0) {
+    this.currentIndex--;
+  } else {
+    this.currentIndex = maxIndex; // loop to last group
+  }
+}
 }

@@ -1,16 +1,20 @@
-<section id="gram-programs" class="section gram-programs">
+<section id="programs" class="section gram-programs">
   <h2>{{ langService.currentLang === 'en' ? 'Gram Panchayat Programs' : 'ग्राम पंचायत कार्यक्रम' }}</h2>
-  <p>{{ langService.currentLang === 'en' ? 
-        'Highlighting our key development programs and initiatives' : 
-        'आमच्या मुख्य विकास कार्यक्रम आणि उपक्रमांचे वर्णन' }}</p>
+  <p>{{ langService.currentLang === 'en'
+        ? 'Highlighting our key development programs and initiatives'
+        : 'आमच्या मुख्य विकास कार्यक्रम आणि उपक्रमांचे वर्णन' }}</p>
 
   <div class="carousel-container">
-    <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * 25 + '%)'">
-      <div class="program-card" *ngFor="let program of programs">
+<div class="carousel-track"
+     [style.transform]="'translateX(-' + (currentIndex * cardWidth) + '%)'">
+      <div class="program-card"
+           *ngFor="let program of programs"
+           [style.flex]="'0 0 ' + (100 / cardsPerView) + '%'">
+        
         <span class="program-badge">{{ program.year }}</span>
 
         <div class="img-container">
-          <img [src]="program.image" [alt]="program.titleEn">
+          <img [src]="program.image" [alt]="program.titleEn" />
         </div>
 
         <h3>{{ langService.currentLang === 'en' ? program.titleEn : program.titleMr }}</h3>

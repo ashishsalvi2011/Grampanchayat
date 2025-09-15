@@ -1,10 +1,44 @@
-  .section {
+ 
+#about {
+background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
+}
+
+ #about h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  text-align: left;   /* align heading to left */
+  color: var(--text-dark);
+  margin-bottom: 2rem;
+  position: relative;
+  display: block;     /* full width block */
+  font-family: 'Poppins', 'Segoe UI', sans-serif;
+  letter-spacing: 1px;
+  padding-bottom: 12px; /* space for underline */
+}
+
+/* Gradient underline */
+#about h2::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;          /* underline starts from left */
+  width: 100%;      /* underline spans full text width */
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    #4dd0e1,  /* medium teal */
+    #26c6da,  /* aqua */
+    #0097a7   /* dark teal */
+  );
+  border-radius: 2px;
+}
+
+ .section {
             padding: 80px 20px;
             margin: 0 auto;
         }
 
         .about {
-            background: linear-gradient(135deg, #f0f7ff 0%, #e6f0ff 100%);
             border-radius: 20px;
             box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
             overflow: hidden;
@@ -21,7 +55,6 @@
 
         .about-heading {
             font-size: 2.8rem;
-            margin-bottom: 1.5rem;
             color: var(--text-dark);
             position: relative;
             display: inline-block;

@@ -1,7 +1,17 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { Language } from '../../language';
 import { MatIconModule } from '@angular/material/icon';
+
+interface Visitor1 {
+  year: string;
+  nameEn: string;
+  nameMr: string;
+  descriptionEn: string;
+  descriptionMr: string;
+  image: string;
+}
+
 
 @Component({
   selector: 'app-visitors',
@@ -11,11 +21,14 @@ import { MatIconModule } from '@angular/material/icon';
   styleUrl: './visitors.css'
 })
 export class Visitors {
- constructor(public langService: Language) {}
+  constructor(public langService: Language) {
+    this.updateCardsPerView();
+  }
 
    currentIndex = 0;
+  cardsPerView = 4;
 
-  visitors = [
+  visitors: Visitor1[] = [
     {
       year: '2023',
       nameEn: 'Dr. John Smith',
@@ -66,15 +79,43 @@ export class Visitors {
     }
   ];
 
-    prev() {
+
+
+  @HostListener('window:resize')
+  onResize() {
+    this.updateCardsPerView();
+  }
+
+  updateCardsPerView() {
+    const width = window.innerWidth;
+    if (width < 576) {
+      this.cardsPerView = 1;
+    } else if (width < 768) {
+      this.cardsPerView = 2;
+    } else if (width < 1024) {
+      this.cardsPerView = 3;
+    } else {
+      this.cardsPerView = 4;
+    }
+  }
+
+  prev() {
     if (this.currentIndex > 0) {
       this.currentIndex--;
+    } else {
+      this.currentIndex = this.visitors.length - this.cardsPerView;
     }
   }
 
   next() {
-    if (this.currentIndex < this.visitors.length - 4) { // show 4 at a time
+    if (this.currentIndex + this.cardsPerView < this.visitors.length) {
       this.currentIndex++;
+    } else {
+      this.currentIndex = 0;
     }
+  }
+
+  getTransform() {
+    return `translateX(-${(100 / this.cardsPerView) * this.currentIndex}%)`;
   }
 }

@@ -1,15 +1,14 @@
-<section id="visitors" class="section visitors">
-  <h2>{{ langService.currentLang === 'en' ? 'Our Distinguished Visitors' : 'आमचे मान्यवर पाहुणे' }}</h2>
+<section id ="visitors" class="section visitors">
+  <h2>{{ langService.currentLang === 'en' ? 'Our Visitors' : 'आमचे पाहुणे' }}</h2>
+  <p>{{ langService.currentLang === 'en' ? 'Guests who visited the village' : 'गावात आलेले पाहुणे' }}</p>
 
   <div class="carousel-container">
-    <div class="carousel-track" [style.transform]="'translateX(-' + currentIndex * 25 + '%)'">
+    <div class="carousel-track" [style.transform]="getTransform()">
       <div class="visitor-card" *ngFor="let visitor of visitors">
-        <span class="visitor-badge">{{ visitor.year }}</span>
-
+        <div class="visitor-badge">{{ visitor.year }}</div>
         <div class="img-container">
-          <img [src]="visitor.image" [alt]="visitor.nameEn" />
+          <img [src]="visitor.image" alt="{{ visitor.nameEn }}">
         </div>
-
         <h3>{{ langService.currentLang === 'en' ? visitor.nameEn : visitor.nameMr }}</h3>
         <p>{{ langService.currentLang === 'en' ? visitor.descriptionEn : visitor.descriptionMr }}</p>
       </div>
@@ -17,14 +16,13 @@
   </div>
 
   <div class="carousel-controls">
-  <button class="nav-btn prev-btn" (click)="prev()">
-    <mat-icon>chevron_left</mat-icon>
-    {{ langService.currentLang === 'en' ? 'Prev' : 'मागे' }}
-  </button>
-
-  <button class="nav-btn next-btn" (click)="next()">
-    {{ langService.currentLang === 'en' ? 'Next' : 'पुढे' }}
-    <mat-icon>chevron_right</mat-icon>
-  </button>
-</div>
+    <button class="nav-btn prev-btn" (click)="prev()">
+      <mat-icon>chevron_left</mat-icon>
+      {{ langService.currentLang === 'en' ? 'Prev' : 'मागे' }}
+    </button>
+    <button class="nav-btn next-btn" (click)="next()">
+      {{ langService.currentLang === 'en' ? 'Next' : 'पुढे' }}
+      <mat-icon>chevron_right</mat-icon>
+    </button>
+  </div>
 </section>

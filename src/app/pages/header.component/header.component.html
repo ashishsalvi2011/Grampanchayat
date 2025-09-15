@@ -1,8 +1,8 @@
 <nav class="navbar">
   <div class="logo">
     <i class="fas fa-tree"></i>
-    <span *ngIf="langService.currentLang === 'en'">Gram Panchayat</span>
-    <span *ngIf="langService.currentLang === 'mr'">ग्राम पंचायत</span>
+    <span *ngIf="langService.currentLang === 'en'">Vashi Gram Panchayat</span>
+    <span *ngIf="langService.currentLang === 'mr'">वाशी ग्राम पंचायत</span>
   </div>
 
   <div class="hamburger" (click)="toggleMenu()">
@@ -21,9 +21,14 @@
     </li>
 
     <li><a href="#home" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Home' : 'मुख्यपृष्ठ' }}</a></li>
+    <li><a href="#schemes" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Schemes' : 'योजना' }}</a></li>
     <li><a href="#about" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'About' : 'आमच्याविषयी' }}</a></li>
     <li><a href="#members" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Members' : 'सदस्य' }}</a></li>
-    <li><a href="#schemes" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Schemes' : 'योजना' }}</a></li>
+    <li><a href="#achievements" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Achievements' : 'ग्राम उपलब्धी' }}</a></li>
+    <li><a href="#programs" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Programs' : 'कार्यक्रम' }}</a></li>
+    <li><a href="#awards" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Awards' : 'पुरस्कार' }}</a></li>
+    <li><a href="#visitors" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Visitors' : 'पाहुणे' }}</a></li>
+    <li><a href="#newspaper" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Newspaper' : 'बातम्यांमध्ये' }}</a></li>
     <li><a href="#contact" (click)="closeMenu()">{{ langService.currentLang === 'en' ? 'Contact' : 'संपर्क' }}</a></li>
   </ul>
 
