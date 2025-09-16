@@ -7,7 +7,7 @@
   justify-content: space-between;
   align-items: center;
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
-  padding: 15px 40px;
+  padding: 15px 20px;
   box-shadow: 0 4px 16px rgba(0,0,0,0.15);
   z-index: 1000;
   font-family: "Poppins", sans-serif;
@@ -171,6 +171,9 @@
   .nav-links a {
     font-size: 1.2rem;
   }
+    li{
+    margin-inline-end: auto;
+  }
 }
 
 
@@ -198,4 +201,9 @@
     display: block;
     margin-left: 20px;
   }
+
+  .li1{
+    margin-inline-end: auto;
+  }
 }
+
