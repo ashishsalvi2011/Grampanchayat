@@ -1,5 +1,5 @@
 <section id="programs" class="section gram-programs">
-  <h2>{{ langService.currentLang === 'en' ? 'Gram Panchayat Programs' : 'ग्राम पंचायत कार्यक्रम' }}</h2>
+  <h2>{{ langService.currentLang === 'en' ? 'Our Programs' : 'आमचे कार्यक्रम' }}</h2>
   <p>{{ langService.currentLang === 'en'
         ? 'Highlighting our key development programs and initiatives'
         : 'आमच्या मुख्य विकास कार्यक्रम आणि उपक्रमांचे वर्णन' }}</p>
@@ -21,17 +21,16 @@
         <p>{{ langService.currentLang === 'en' ? program.descriptionEn : program.descriptionMr }}</p>
       </div>
     </div>
+
+      <button class="nav-btn prev-btn" (click)="prev()" *ngIf="currentIndex > 0">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+
+  <button class="nav-btn next-btn" (click)="next()" *ngIf="currentIndex < programs.length - cardsPerView">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+
   </div>
 
-  <div class="carousel-controls">
-    <button class="nav-btn prev-btn" (click)="prev()">
-      <mat-icon>chevron_left</mat-icon>
-      {{ langService.currentLang === 'en' ? 'Prev' : 'मागे' }}
-    </button>
-
-    <button class="nav-btn next-btn" (click)="next()">
-      {{ langService.currentLang === 'en' ? 'Next' : 'पुढे' }}
-      <mat-icon>chevron_right</mat-icon>
-    </button>
-  </div>
 </section>

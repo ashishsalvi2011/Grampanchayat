@@ -1,8 +1,8 @@
 <nav class="navbar">
   <div class="logo">
-    <i class="fas fa-tree"></i>
-    <span *ngIf="langService.currentLang === 'en'">Washi Gram Panchayat</span>
-    <span *ngIf="langService.currentLang === 'mr'">वाशी ग्राम पंचायत</span>
+     <img src="/src/assets/logo/1.png" alt="Logo" class="logo-img" />
+    <span *ngIf="langService.currentLang === 'en'">Gram Panchayat Washi Haveli</span>
+    <span *ngIf="langService.currentLang === 'mr'">ग्रामपंचायत वाशी हवेली</span>
   </div>
 
   <div class="hamburger" (click)="toggleMenu()">

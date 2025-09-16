@@ -1,8 +1,8 @@
 <section id="achievements" class="section achievements">
   <h2>
     {{ langService.currentLang === 'en' 
-       ? 'Village Achievements 🏵️ Gram Panchayat Vashihaveli 🏵️' 
-       : 'ग्रामपंचायत वाशीहवेली 🏵️ ग्राम उपलब्धी 🏵️' }}
+       ? '🏵️ Our Achievements 🏵️' 
+       : '🏵️ आमची उपलब्धी 🏵️' }}
   </h2>
 
     <p class="subtitle" style="  margin-bottom: 2rem;">
@@ -24,9 +24,20 @@
         <p>{{ langService.currentLang === 'en' ? ach.descriptionEn : ach.descriptionMr }}</p>
       </div>
     </div>
+
+
+  <button class="nav-btn prev-btn" (click)="prev()" *ngIf="currentIndex > 0">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+
+  <button class="nav-btn next-btn" (click)="next()" *ngIf="currentIndex < achievements.length - cardsPerView">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
+
   </div>
 
-  <div class="carousel-controls">
+  <!-- <div class="carousel-controls">
     <button class="nav-btn prev-btn" (click)="prev()">
       <mat-icon>chevron_left</mat-icon>
       {{ langService.currentLang === 'en' ? 'Prev' : 'मागे' }}
@@ -36,5 +47,5 @@
       {{ langService.currentLang === 'en' ? 'Next' : 'पुढे' }}
       <mat-icon>chevron_right</mat-icon>
     </button>
-  </div>
+  </div> -->
 </section>

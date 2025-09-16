@@ -21,5 +21,5 @@ import { Achievements } from "./pages/achievements/achievements";
   styleUrl: './app.css'
 })
 export class App {
-  protected title = 'GRAMPANCHAYAT';
+  protected title = 'ग्रामपंचायत वाशीहवेली';
 }

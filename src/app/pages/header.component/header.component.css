@@ -25,6 +25,11 @@
   gap: 8px;
 }
 
+.logo-img {
+  height: 40px;  /* adjust as needed */
+  width: auto;
+}
+
 /* Hamburger menu (mobile only) */
 .hamburger {
   display: none;

@@ -13,9 +13,18 @@
         <p>{{ langService.currentLang === 'en' ? visitor.descriptionEn : visitor.descriptionMr }}</p>
       </div>
     </div>
+
+      <button class="nav-btn prev-btn" (click)="prev()" *ngIf="currentIndex > 0">
+    <mat-icon>chevron_left</mat-icon>
+  </button>
+
+
+  <button class="nav-btn next-btn" (click)="next()" *ngIf="currentIndex < visitors.length - cardsPerView">
+    <mat-icon>chevron_right</mat-icon>
+  </button>
   </div>
 
-  <div class="carousel-controls">
+  <!-- <div class="carousel-controls">
     <button class="nav-btn prev-btn" (click)="prev()">
       <mat-icon>chevron_left</mat-icon>
       {{ langService.currentLang === 'en' ? 'Prev' : 'मागे' }}
@@ -24,5 +33,5 @@
       {{ langService.currentLang === 'en' ? 'Next' : 'पुढे' }}
       <mat-icon>chevron_right</mat-icon>
     </button>
-  </div>
+  </div> -->
 </section>

@@ -109,8 +109,36 @@ section p {
   object-fit: cover;
 }
 
+.nav-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+  transition: background 0.3s ease;
+}
 
-.carousel-controls {
+.nav-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.prev-btn {
+  left: 10px;
+}
+
+.next-btn {
+  right: 10px;
+}
+
+/* .carousel-controls {
   display: flex;
   justify-content: center;
   gap: 20px;
@@ -152,7 +180,7 @@ section p {
   .next-btn {
     background: linear-gradient(45deg, #4caf50, #2e7d32);
   }
-}
+} */
 
 /* ✅ Responsive adjustments */
 @media (max-width: 1024px) {
