@@ -65,7 +65,6 @@ background: linear-gradient(135deg, #e0f7fa, #b2ebf2);
             position: absolute;
             bottom: -15px;
             left: 50%;
-            transform: translateX(-50%);
             width: 100px;
             height: 4px;
             background: linear-gradient(to right, var(--gradient-start), var(--gradient-end));

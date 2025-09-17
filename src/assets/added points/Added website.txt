@@ -1,0 +1,62 @@
+छायाचित्र व व्हिडिओ गॅलरी
+सांस्कृतिक कार्यक्रम, ग्रामसोहळे, पायाभूत सुविधा प्रकल्प, विकासकामे दाखवण्यासाठी.
+आगामी कार्यक्रम / नोटीस बोर्ड
+शासकीय परिपत्रके, निविदा, सभेच्या तारखा, ग्रामसभेच्या घोषणा.
+डिजिटल सेवा / डाउनलोड्स
+जन्म/मृत्यू दाखला, राशनकार्ड, ना हरकत प्रमाणपत्र, कर पावती आदी अर्ज व फॉर्म डाउनलोड करण्याची सोय.
+विकास प्रकल्प
+सुरू असलेले व पूर्ण झालेले प्रकल्प (रस्ते, पाणीपुरवठा, शाळा, आरोग्य योजना).
+गावाचा परिचय
+लोकसंख्या, इतिहास, संस्कृती, प्रसिध्द स्थळे, मंदिरे, ओळख चिन्हे.
+ई-गव्हर्नन्स लिंक
+महाराष्ट्र शासनाच्या पोर्टल्सचे थेट दुवे (आपले सरकार, महाभूमी, ग्रामपंचायत DPMS इ.).
+पंचायत अंदाजपत्रक व अहवाल
+वार्षिक आर्थिक अहवाल, उत्पन्न-खर्च, कर संकलन, पारदर्शकता.
+नागरिक अभिप्राय / सूचना पेटी
+ग्रामस्थांना तक्रारी, सूचना किंवा अभिप्राय देण्यासाठी सोपी फॉर्म प्रणाली.
+तक्रार निवारण प्रणाली
+तक्रारींचा मागोवा घेणे व प्रतिसाद देणे (साधी तिकीट प्रणाली किंवा Google Form).
+नेहमी विचारले जाणारे प्रश्न (FAQ)
+मालमत्ता कर, शासकीय योजना पात्रता, प्रमाणपत्र कसे मिळवायचे इत्यादी.
+आपत्कालीन संपर्क
+स्थानिक रुग्णालय, पोलीस, अग्निशमन, वीज विभाग, पाणीपुरवठा हेल्पलाइन.
+शेतकरी विभाग / कृषी अद्ययावत माहिती
+पिकांचे दर, हवामान अंदाज, सरकारी अनुदाने, खत/औषधांची माहिती.
+पर्यटन / स्थानिक व्यवसाय प्रोत्साहन
+पर्यटन स्थळे, हस्तकला, स्थानिक उत्पादने (उदा. आंबा, काजू, शेळीपालन).
+बहुभाषिक सुविधा
+मराठी व इंग्रजी या भाषांमध्ये पर्याय ठेवणे (भाषा बदलण्याची सोय).
+सुलभता सुविधा (Accessibility)
+मोठे अक्षर टॉगल, डार्क/लाईट मोड, मजकूराचे ऑडिओ वाचन.
+
+--------------------------------------------------------------------------------------------------------------------------------
+Photo & Video Gallery
+Showcase cultural programs, village events, infrastructure projects, development work.
+Upcoming Events / Notices Board
+Display government circulars, tenders, meeting announcements, Gram Sabha dates.
+Digital Services / Downloads
+Provide downloadable forms (birth/death certificate, ration card, NOC, tax receipts, etc.).
+Development Projects
+Ongoing & completed projects (roads, water supply, schools, health initiatives).
+Village Profile
+Demographics, history, culture, famous places, temples, landmarks.
+E-Governance Links
+Direct links to Maharashtra government portals (Aaple Sarkar, Mahabhumi, Gram Panchayat DPMS, etc.).
+Panchayat Budget & Reports
+Annual financial reports, income & expenditure, tax collection, transparency.
+Citizen Feedback / Suggestion Box
+Simple form for villagers to submit complaints, suggestions, or issues.
+Grievance Redressal System
+Track and respond to complaints (basic ticket system or Google Form integration).
+FAQ Section
+Common questions: property tax, schemes eligibility, how to apply for certificates, etc.
+Emergency Contacts
+Local hospital, police, fire station, electricity board, water supply helpline.
+Farmer’s Corner / Agriculture Updates
+Crop prices, weather updates, government subsidies, fertilizer/pesticide info.
+Tourism / Local Business Promotion
+Highlight local tourism spots, handicrafts, local products (like mango, cashew, goat farming in your case).
+Multilingual Support
+Already you have Marathi & English ✅ → keep option for smooth switching.
+Acessibility Features
+Larger font toggle, dark/light mode, audio read-out for important text.
