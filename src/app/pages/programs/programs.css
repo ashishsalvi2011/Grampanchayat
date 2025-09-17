@@ -132,10 +132,12 @@ section p {
 
 .prev-btn {
   left: 10px;
+    margin-top: -50px;
 }
 
 .next-btn {
   right: 10px;
+    margin-top: -50px;
 }
 
 /* .carousel-controls {

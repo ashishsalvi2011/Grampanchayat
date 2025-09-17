@@ -130,10 +130,12 @@ section p {
 
 .prev-btn {
   left: 10px;
+    margin-top: -40px;
 }
 
 .next-btn {
   right: 10px;
+    margin-top: -40px;
 }
 
 
